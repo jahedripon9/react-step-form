@@ -6,6 +6,7 @@ import {
   Typography,
   List,
   ListItem,
+  ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
@@ -14,14 +15,14 @@ import React, { Component } from "react";
 export class Confirm extends Component {
   continue = (e) => {
     e.preventDefault();
-    // PROCESS Form
+    // PROCESS FORM //
     this.props.nextStep();
   };
 
-    back = (e) => {
-      e.preventDefault();
-      this.props.prevStep();
-    };
+  back = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
 
   render() {
     const {
@@ -49,18 +50,53 @@ export class Confirm extends Component {
             </AppBar>
           </Box>
           <Box
-            component="form"
             sx={{
               "& > :not(style)": { m: 2, width: "25ch" },
             }}
           >
             <List>
-              <ListItem primaryText="First Name" secondaryText={firstName} />
-              <ListItem primaryText="Last Name" secondaryText={lastName} />
-              <ListItem primaryText="Email" secondaryText={email} />
-              <ListItem primaryText="Occupation" secondaryText={occupation} />
-              <ListItem primaryText="City" secondaryText={city} />
-              <ListItem primaryText="Bio" secondaryText={bio} />
+              <ListItem>
+                <ListItemText
+                  sx={{ textAlign: "center" }}
+                  primary="First Name"
+                  secondary={firstName}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  sx={{ textAlign: "center" }}
+                  primary="Last Name"
+                  secondary={lastName}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  sx={{ textAlign: "center" }}
+                  primary="Email"
+                  secondary={email}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  sx={{ textAlign: "center" }}
+                  primary="Occupation"
+                  secondary={occupation}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  sx={{ textAlign: "center" }}
+                  primary="City"
+                  secondary={city}
+                />
+              </ListItem>
+              <ListItem>
+                <ListItemText
+                  sx={{ textAlign: "center" }}
+                  primary="Bio"
+                  secondary={bio}
+                />
+              </ListItem>
             </List>
             <br />
             <Button
@@ -74,11 +110,11 @@ export class Confirm extends Component {
             </Button>
             <Button
               variant="contained"
-              label="Continue"
+              label="Confirm & Continue"
               primary={true}
               onClick={this.continue}
             >
-              Continue
+              Confirm & Continue
             </Button>
           </Box>
         </React.Fragment>

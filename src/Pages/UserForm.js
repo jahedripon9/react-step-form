@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Confirm from "./Confirm";
 import FormPersonalDetails from "./FormPersonalDetails";
 import FormUserDetails from "./FormUserDetails";
+import Success from "./Success";
 
 export class UserForm extends Component {
   state = {
@@ -69,8 +70,10 @@ export class UserForm extends Component {
             values={values}
           />
         );
-      case 2:
-        return <h1>Success</h1>;
+      case 4:
+        return (
+          <Success/>
+        );
     }
   }
 }
