@@ -1,4 +1,4 @@
-import { Alert, AlertTitle, Box, IconButton, Toolbar, Typography } from "@mui/material";
+import { Alert, AlertTitle, Box, Dialog, IconButton, Toolbar, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import React, { Component } from "react";
@@ -37,11 +37,13 @@ export class Success extends Component {
               </Toolbar>
             </AppBar>
           </Box>
-          <Alert severity="success">
-            <AlertTitle>Success</AlertTitle>
-            Thank You For Your Submission —
-            <strong>You will get an email with further instructions.!</strong>
-          </Alert>
+          <Dialog open fullWidth maxWidth="sm">
+            <Alert severity="success">
+              <AlertTitle>Success</AlertTitle>
+              Thank You For Your Submission —
+              <strong>You will get an email with further instructions.!</strong>
+            </Alert>
+          </Dialog>
         </React.Fragment>
       </>
     );

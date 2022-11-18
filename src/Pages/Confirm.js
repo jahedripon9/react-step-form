@@ -7,6 +7,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Dialog,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
@@ -49,56 +50,35 @@ export class Confirm extends Component {
               </Toolbar>
             </AppBar>
           </Box>
+
+          <Box>
+            <List sx={{ display:'inline-block' }}>
+              <ListItem >
+                <ListItemText primary="First Name" secondary={firstName} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Last Name" secondary={lastName} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Email" secondary={email} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Occupation" secondary={occupation} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="City" secondary={city} />
+              </ListItem>
+              <ListItem>
+                <ListItemText primary="Bio" secondary={bio} />
+              </ListItem>
+            </List>
+            <br />
+          </Box>
           <Box
             sx={{
               "& > :not(style)": { m: 2, width: "25ch" },
             }}
           >
-            <List>
-              <ListItem>
-                <ListItemText
-                  sx={{ textAlign: "center" }}
-                  primary="First Name"
-                  secondary={firstName}
-                />
-              </ListItem>
-              <ListItem>
-                <ListItemText
-                  sx={{ textAlign: "center" }}
-                  primary="Last Name"
-                  secondary={lastName}
-                />
-              </ListItem>
-              <ListItem>
-                <ListItemText
-                  sx={{ textAlign: "center" }}
-                  primary="Email"
-                  secondary={email}
-                />
-              </ListItem>
-              <ListItem>
-                <ListItemText
-                  sx={{ textAlign: "center" }}
-                  primary="Occupation"
-                  secondary={occupation}
-                />
-              </ListItem>
-              <ListItem>
-                <ListItemText
-                  sx={{ textAlign: "center" }}
-                  primary="City"
-                  secondary={city}
-                />
-              </ListItem>
-              <ListItem>
-                <ListItemText
-                  sx={{ textAlign: "center" }}
-                  primary="Bio"
-                  secondary={bio}
-                />
-              </ListItem>
-            </List>
-            <br />
             <Button
               variant="contained"
               label="Back"
