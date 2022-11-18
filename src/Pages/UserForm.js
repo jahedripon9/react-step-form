@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Confirm from "./Confirm";
 import FormPersonalDetails from "./FormPersonalDetails";
 import FormUserDetails from "./FormUserDetails";
 
@@ -61,7 +62,13 @@ export class UserForm extends Component {
           />
         );
       case 3:
-        return <h1>Confirm</h1>;
+        return (
+          <Confirm
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            values={values}
+          />
+        );
       case 2:
         return <h1>Success</h1>;
     }
