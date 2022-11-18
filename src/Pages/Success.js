@@ -1,4 +1,13 @@
-import { Alert, AlertTitle, Box, Dialog, IconButton, Toolbar, Typography } from "@mui/material";
+import {
+  Alert,
+  AlertTitle,
+  Box,
+  Button,
+  Dialog,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import React, { Component } from "react";
@@ -43,6 +52,23 @@ export class Success extends Component {
               Thank You For Your Submission —
               <strong>You will get an email with further instructions.!</strong>
             </Alert>
+            <a
+              
+            >
+              <Button
+                sx={{
+                  textDecoration: "none",
+                  textAlign: "center",
+                  display: "block ",
+                }}
+                href="/"
+                variant="contained"
+                label="Confirm & Continue"
+                primary={true}
+              >
+                Home
+              </Button>
+            </a>
           </Dialog>
         </React.Fragment>
       </>
